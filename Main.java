@@ -11,5 +11,9 @@ public class Main{
         );
 
         student.display();
+
+        StudentManager manager = new StudentManager();
+
+        manager.addStudent();
     }
 }
