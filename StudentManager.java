@@ -64,4 +64,56 @@ public class StudentManager {
 
     }
 
+    public void updateStudent() {
+
+    System.out.print("Enter Student ID: ");
+    int id = sc.nextInt();
+    sc.nextLine();
+
+    for (Student s : students) {
+
+        if (s.getId() == id) {
+
+            System.out.print("Enter New Name: ");
+            s.setName(sc.nextLine());
+
+            System.out.print("Enter New Age: ");
+            s.setAge(sc.nextInt());
+            sc.nextLine();
+
+            System.out.print("Enter New Department: ");
+            s.setDepartment(sc.nextLine());
+
+            System.out.print("Enter New Marks: ");
+            s.setMarks(sc.nextDouble());
+
+            System.out.println("\nStudent Updated Successfully!");
+            return;
+        }
+
+    }
+
+    System.out.println("Student Not Found.");
+    }
+
+    public void deleteStudent() {
+
+    System.out.print("Enter Student ID: ");
+    int id = sc.nextInt();
+
+    for (Student s : students) {
+
+        if (s.getId() == id) {
+
+            students.remove(s);
+
+            System.out.println("\nStudent Deleted Successfully!");
+            return;
+        }
+
+    }
+
+    System.out.println("Student Not Found.");
+    }
+
 }
